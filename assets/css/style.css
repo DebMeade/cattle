@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eee;
+  overflow-x: hidden;
+  /* font-family: "Noto Serif TC", serif; */
+}
+header {
+  width: 100%;
+  height: 60px;
+  background: #333;
+  position: relative;
+  box-shadow: 0px 2px 10px grey;
+  z-index: 10;
+  position: relative;
+}
+.slider-container {
+  width: 100%;
+  height: 400px;
+  /* background: url("../images/IMG_6504.jpg"); */
+  background-color:turquoise;
+  background-size: 100% 100%;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  /* background: red; */
+  overflow: hidden;
+}
+.slide>.upper-div {
+  position: relative;
+  width: 700px;
+  height: 100px;
+  /* background: blue; */
+  margin: 0 auto;
+  font-size: 5em;
+  color: white;
+  font-family: "Noto Serif TC", serif;
+  font-weight: bold;
+  text-shadow: 0px 2px 2px #333;
+  /* top: 10px; */
+  animation: fromLeft 2s ease;
+}
+.slide>.lower-div {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  animation: fromRight 2s ease;
+}
+.slide>section{
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+.slide>section>.left-div {
+  position: relative;
+  width: 400px;
+  float: left;
+  text-align: center;
+  font-size: 5em;
+  top: 10%;
+  color: #fff;
+  text-shadow: 0 2px hotpink;
+  animation: fromTop 2s ease;
+}
+.slide>section>.right-div {
+  position: relative;
+  width: 600px;
+  float: left;
+  animation: fromBottom 2s ease;
+}
+.slide>.img-container {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  top: 20%;
+  animation: fromDiagonal 2s ease;
+}
+.slide>section>.sec-1 {
+  width: 300px;
+  height: 400px;
+  float: left;
+  /* background: red; */
+}
+.sec-1>img {
+  position: absolute;
+  width: 300px;
+  top: 15%;
+}
+.slide>section>.sec-2 {
+  position: relative;
+  width: 360px;
+  height: 400px;
+  float: left;
+  /* background: blue; */
+  font-size: 30px;;
+  text-align: center;
+  top: 20%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 2px #333;
+}
+.slide>section>.sec-3 {
+  width: 330px;
+  height: 400px;
+  float: left;
+  /* background: yellow; */
+}
+.sec-3>img{
+  width: 330px;
+}
+.slide>.group-1 {
+  position: relative;
+  animation: groupAnimation 2s ease;
+}
+.btn {
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 2px 2px #333;
+  cursor: pointer;
+  top: 30%;
+  margin: 1%;
+}
+#right {
+  right: 0;
+}
+.btn:hover {
+  color:#333;
+}
+
+
+@keyframes fromLeft {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes fromRight {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes fromTop {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes fromBottom {
+  0% {
+    bottom: -100%;
+  }
+  50% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+@keyframes fromDiagonal {
+  0% {
+    top: -100%; left: -100%;
+  }
+  50% {
+    top: 100%; left: 100%;
+  }
+  100% {
+    top: 20%; left: 0;
+  }
+}
+@keyframes groupAnimation {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .slider-container {
+    height: 150px;
+  }
+  .slide {
+    height: 150px;
+  }
+  .slide>.upper-div {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    animation: fromLeft 2s ease;
+    text-align: center;
+  }
+  .slide>.lower-div {
+    width: 300px;
+  }
+  .slide>.lower-div>img {
+    width: 300px;
+  }
+  .slide>section{
+    position: relative;
+    width: 100%;
+    height: 150px;
+  }
+  .slide>section>.left-div {
+    width: 40%;
+    font-size: 2em;
+  }
+  .slide>section>.right-div {
+    width: 60%;
+  }
+  .slide>section>.right-div>img {
+    width: 200px;
+  }
+  .slide>.img-container {
+    width: 300px;
+  }
+  .slide>.img-container>img {
+    width: 300px;
+  }
+  .slide>section>.sec-1 {
+    width: 30%;
+    height: 150px;
+  }
+  .slide>section>.sec-2 {
+    width: 40%;
+    height: 150px;
+    font-size: 12px;;
+  }
+  .slide>section>.sec-3 {
+    width: 30%;
+    height: 150px;
+  }
+  .sec-1>img {
+    width: 100px;
+  }
+  .sec-3>img{
+    width: 100px;
+  }
+  .btn {
+    font-size: 15px;
+    top: 20%
+  }
+}
